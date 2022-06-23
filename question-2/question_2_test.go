@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	. "github.com/connected-freight/be-toke-home-assignment-golang/question-2"
+	. "github.com/connected-freight/be-take-home-assignment-golang/question-2"
 )
 
 func TestQuestion2(t *testing.T) {
