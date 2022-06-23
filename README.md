@@ -61,7 +61,7 @@ go test -v ./...
 ---
 
 ## Submission
-When you are ready to submit, push all of your changes, and add `nico@connectedfreight.com` as a collaborator to your repo for grading 😊
+When you are ready to submit, push all of your changes, and add `nico-cf` as a collaborator to your repo for grading 😊
 
 ---
 
