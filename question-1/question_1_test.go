@@ -22,7 +22,7 @@ func TestQuestion1(t *testing.T) {
 				Name:         "John Doe",
 				PhoneNumber:  "1234567890",
 				EmailAddress: "john@example.com",
-				DateOfBirth:  strPtr("1990-02-21"),
+				DateOfBirth:  strPtr("1990-01-21"),
 			},
 			want: User{
 				ID:           "john@example.com",
@@ -38,7 +38,7 @@ func TestQuestion1(t *testing.T) {
 				Name:         "John Doe",
 				PhoneNumber:  "1234567890",
 				EmailAddress: "john@example.com",
-				DateOfBirth:  strPtr("1990-02-21"),
+				DateOfBirth:  strPtr("1990-06-21"),
 			},
 			wantAgeOfToday: 32,
 		},
@@ -48,7 +48,7 @@ func TestQuestion1(t *testing.T) {
 				Name:         "John Doe",
 				PhoneNumber:  "",
 				EmailAddress: "john@example.com",
-				DateOfBirth:  strPtr("1990-02-21"),
+				DateOfBirth:  strPtr("1990-01-21"),
 			},
 			want: User{
 				ID:           "john@example.com",
@@ -64,7 +64,7 @@ func TestQuestion1(t *testing.T) {
 				Name:         "John Doe",
 				PhoneNumber:  "1234567890",
 				EmailAddress: "",
-				DateOfBirth:  strPtr("1990-02-21"),
+				DateOfBirth:  strPtr("1990-01-21"),
 			},
 			want: User{
 				ID:           "1234567890",
@@ -188,14 +188,14 @@ func TestQuestion1(t *testing.T) {
 			}
 
 			if tt.wantAgeOfToday > 0 {
-				if got.AgeToday != tt.wantAgeOfToday {
-					t.Errorf("want age today: %d, got: %d", tt.wantAgeOfToday, got.AgeToday)
+				if got.AgeToday() != tt.wantAgeOfToday {
+					t.Errorf("want age today: %d, got: %d", tt.wantAgeOfToday, got.AgeToday())
 				}
 				return
 			}
 
 			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("got: %v, want: %v", got, tt.want)
+				t.Errorf("got: %+v, want: %+v", got, tt.want)
 			}
 		})
 	}

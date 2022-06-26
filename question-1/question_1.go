@@ -10,6 +10,5 @@ func MapUserInputToDomainModel(input UserInput) (User, error) {
 		PhoneNumber:  "1234567890",
 		EmailAddress: "user@example.com",
 		DateOfBirth:  time.Date(2000, 1, 1, 0, 0, 0, 0, time.UTC),
-		AgeToday:     22,
 	}, nil
 }

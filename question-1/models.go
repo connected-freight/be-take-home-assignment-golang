@@ -15,5 +15,9 @@ type User struct {
 	PhoneNumber  string
 	EmailAddress string
 	DateOfBirth  time.Time
-	AgeToday     int
+}
+
+func (u User) AgeToday() int {
+	// TODO: implement
+	return 22
 }
